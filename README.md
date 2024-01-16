@@ -1,66 +1,42 @@
-# Estrutura Básica do Projeto PHP
-###### Basic PHP Project Structure
+Basic PHP Project Structure
+This repository was based on pds/skeleton, which describes, based on studies, a standard structure for PHP projects and packages.
 
-Este repositorio foi baseado no [pds/skeleton](https://github.com/php-pds/skeleton), onde descreve com base em estudos,
-uma estrutura padrão para projetos e pacotes PHP.
+Changes were made to speed up the process of setting up, testing, and studying new PHP functionalities. Consequently, the structure was modified, and the details of these modifications can be found in this document. For more details, consult the original documentation before starting to use it.
 
-Foi feito alterações a fim de tornar mais rapido subir, testar e estudar novas funcionalidades PHP, por conta disso a 
-estrutura foi modificada, os detalhes das modificações você encontra nesse documento, para mais detalhes consulte 
-a [documentação original](https://github.com/php-pds/skeleton) antes de começar a usar.
+Summary
+If the project has a root folder for...	...then the folder will be named:
+command line executables	bin/
+dockerfiles to set up the application	docker/
+configuration files	config/
+documentation files	docs/
+web server files	public/
+other resource files	resources/
+PHP source code	src/
+test code	tests/
+additional packages	vendor/
+If the project has a root file for...	...then the file will be named:
+a log of changes between versions	CHANGELOG(.*)
+guidelines for contributors	CONTRIBUTING(.*)
+licensing information	LICENSE(.*)
+information about the package or project itself	README(.*)
+project's required packages	composer.json
+Changes from the Original Project
+"docker" Directory
+The original project was designed to standardize the development of new PHP packages by the community. The docker folder was created to store files related to Docker and Docker Compose, allowing the complete environment to be set up for tests, studies, or new projects, providing a good starting point.
 
-## Resumo
+Inside the directory, there's already a complete and configured localhost environment with Nginx, PHP-FPM, and PHP7.4.
 
-| Se o projeto tiver uma pasta na raiz para...    | ...então a pasta será nomeada: |
-| ----------------------------------------------- | --------------------------- |
-| executáveis da linha de comando                 | `bin/`                      |
-| arquivos dockerfiles para subir a aplicação     | `docker/`                   |
-| arquivos de configuração                        | `config/`                   |
-| arquivos de documentação                        | `docs/`                     |
-| arquivos do servidor web                        | `public/`                   |
-| outros arquivos de recursos                     | `resources/`                |
-| Código fonte PHP                                | `src/`                      |
-| código de teste                                 | `tests/`                    |
-| pacotes adicionais                              | `vendor/`                   |
+"vendor" Directory and "composer.json" File
+The composer.json was added to the project with its configurations, thereby speeding up development with external packages. The vendor directory is automatically created when running the composer install or composer update command.
 
+Files in "public/"
+Files were added for constructing the project with a testing base. public/index.php loads the composer's autoload and is already loaded by the web server when starting services with docker-compose up. public/phpinfo.php is for checking all the configurations and modules enabled in the image.
 
-| Se o projeto tiver um arquivo na raiz para...   | ....então o arquivo será nomeado: |
-| ----------------------------------------------- | --------------------------------- |
-| um log de mudanças entre versões                | `CHANGELOG(.*)`                   |
-| diretrizes para colaboradores                   | `CONTRIBUTING(.*)`                |
-| informações de licenciamento                    | `LICENSE(.*)`                     |
-| informações sobre o próprio pacote ou projeto   | `README(.*)`                      |
-| pacotes requisitos do projeto                   | `composer.json`                   |
+How to Use
+There are two ways to use this PHP project template.
 
-## Alterações do projeto original
+The first is by cloning this repository and placing it in the root of your web server/PHP, pointing the public folder to public and running composer to update the packages.
 
-#### Diretorio "docker"
-O projeto original foi realizado a fim de padronizar o desenvolvimento de novos pacotes PHP 
-pela comunidade, a pasta **docker** foi criada para guardar arquivos relacionados ao Docker e Docker Compose, assim 
-conseguimos subir o ambiente completo para testes, estudos ou novos projetos e temos um bom 
-ponto de partida.
+The second is after cloning the repository to a server with Docker and Docker Compose installed, enter the docker folder and run build.sh to start the services.
 
-Dentro do diretorio ja se encontra o ambiente localhost completo e configurado com Nginx, PHP-FPM e PHP7.4.
-
-#### Diretorio "vendor" e arquivo "composer.json"
-Foi adiciona o **composer.json** no projeto já com as configurações do mesmo, assim, agilizando o 
-desenvolvimento com pacotes externos. O diretorio **vendor** é criado automaticamente 
-ao rodar o comando `composer install` ou `composer update`
-
-#### Arquivos em "public/"
-Foi adicionado arquivos para a construção do projeto já ter uma base de testes. 
-**public/index.php** carrega o autoload do composer e já é carregado pelo servidor web 
-ao iniciar os serviços com `docker-compose up`. **public/phpinfo.php** para conferir todas 
-as configurações e modulos habilitados na imagem.
-
-## Como usar
-
-Existem duas maneiras para usar este templete de projeto PHP.
-
-A primeira é clonando este repositorio e colocar no root do seu servidor web/php, aponte 
-a pasta publica para **public** e rode o composer para atualizar os pacotes.
-
-A segunda é após clonar o repositorio para um servidor com docker e docker compose 
-instalado, entre na pasta docker e rode o build.sh para iniciar os serviços.
-
-Todos os arquivos estão ao maximo simplificado e comentados, você tem total liberdade para
-alterar conforme sua necessidade.
+All files are as simplified and commented as possible, giving you complete freedom to modify them as needed.
