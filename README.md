@@ -85,7 +85,7 @@ git clone https://github.com/your-username/quiz-website.git
 2. Create database:
 
 ```
-quiz_website
+quiz
 ```
 
 3. Import SQL file:
