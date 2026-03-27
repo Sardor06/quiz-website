@@ -157,10 +157,5 @@ admin
 ## 👨‍💻 Author
 
 * Atamurodov Sardor
-* GitHub: https://github.com/your-username
+* GitHub: https://github.com/Sardor6606
 
----
-
-## ⭐ Support
-
-If you like this project, please ⭐ the repository!
