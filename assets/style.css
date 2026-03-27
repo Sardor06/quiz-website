@@ -1,0 +1,20 @@
+
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fb; color: #222; }
+.container { width: min(1000px, 92%); margin: 0 auto; }
+.site-header { background: #1f3b73; color: white; padding: 14px 0; margin-bottom: 24px; }
+.nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.brand { color: white; text-decoration: none; font-weight: 700; font-size: 22px; }
+nav a { color: white; text-decoration: none; margin-left: 14px; }
+.card { background: white; border-radius: 14px; padding: 20px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); margin-bottom: 18px; }
+input, textarea, select, button { width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 14px; border: 1px solid #cfd7e6; border-radius: 10px; font-size: 15px; }
+button, .btn { background: #1f3b73; color: white; border: none; cursor: pointer; text-decoration: none; display: inline-block; width: auto; padding: 12px 18px; }
+button:hover, .btn:hover { opacity: 0.95; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.error { background: #ffe3e3; color: #992222; padding: 12px; border-radius: 10px; margin-bottom: 12px; }
+.success { background: #e3f9e5; color: #1d6b2a; padding: 12px; border-radius: 10px; margin-bottom: 12px; }
+.question { margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid #e5eaf3; }
+.meta { color: #666; font-size: 14px; }
+.timer { font-weight: 700; color: #b00020; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px; border-bottom: 1px solid #dde4f0; text-align: left; }
